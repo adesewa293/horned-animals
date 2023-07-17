@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/horned-animals/static/css/main.31d6cfe0.css",
+    "main.js": "/horned-animals/static/js/main.6d555e50.js",
+    "index.html": "/horned-animals/index.html",
+    "main.6d555e50.js.map": "/horned-animals/static/js/main.6d555e50.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.6d555e50.js"
+  ]
+}
