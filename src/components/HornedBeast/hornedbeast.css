@@ -1,5 +1,6 @@
 .beast-container {
   width: 45vh;
+  cursor: pointer;
 }
 
 img {
@@ -12,3 +13,9 @@ img {
 img:last-of-type{
   object-position: right;
 }
+.likeButton {
+  cursor: pointer;
+}
+/* @media (min-width: 600px) {
+  height:70%
+} */

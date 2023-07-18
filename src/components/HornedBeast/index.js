@@ -13,7 +13,7 @@ function handleFav() {
   return (
     <div className="beast-container">
       <h2>{title}</h2>
-      <img src={imageUrl} alt={title} title={title} />
+      <img onClick={handleFav} src={imageUrl} alt={title} title={title} />
       <p>{description}</p>
       <span className="likeButton" onClick={handleFav}>❤️</span> {fav}
     </div>
