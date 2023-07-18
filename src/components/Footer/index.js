@@ -1,4 +1,6 @@
+import "./footer.css";
+
 function Footer() {
-  return <p>Made by Adesewa</p>
+  return <footer> Made by Adesewa </footer>
 }
 export default Footer;

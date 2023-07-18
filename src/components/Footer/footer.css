@@ -1,0 +1,7 @@
+footer {
+  background-color: hotpink;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+}

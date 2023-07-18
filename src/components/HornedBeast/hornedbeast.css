@@ -1,0 +1,14 @@
+.beast-container {
+  width: 45vh;
+}
+
+img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+img:last-of-type{
+  object-position: right;
+}

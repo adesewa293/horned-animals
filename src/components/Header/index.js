@@ -1,4 +1,6 @@
+import "./header.css";
+
 function Header() {
-  return <h1>Horned Beasts</h1>;
+  return <h1>Beast World</h1>;
 }
 export default Header;
