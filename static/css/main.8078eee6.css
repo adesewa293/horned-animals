@@ -1,0 +1,2 @@
+.App{display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}.beast-container{width:45vh}img{height:45vh;object-fit:cover;object-position:center;width:100%}img:last-of-type{object-position:right}main{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between}footer,h1{background-color:hotpink;color:#fff;padding:1rem}footer{display:flex;justify-content:center}
+/*# sourceMappingURL=main.8078eee6.css.map*/
