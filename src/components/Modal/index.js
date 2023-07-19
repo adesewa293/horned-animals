@@ -2,7 +2,8 @@ import React from "react";
 import "./modal.css";
 
 function Modal(props) {
-  const { onClose } = props;
+  const { onClose, item } = props;
+
   return (
     <div className="modal-overlay open">
       <div className="modal-content">
@@ -10,7 +11,11 @@ function Modal(props) {
           &times;
         </button>
         <div>
-          This is a modal
+          <div>
+            <p>{item.title}</p>
+            <p>{item.description}</p>
+            <img src={item.image_url} alt={'beast-img'}/>
+          </div>
         </div>
       </div>
     </div>

@@ -168,9 +168,12 @@ const hornedList = [
 
 
 function Main() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalItem, setModalItem] = useState(null);
   
-  function showModal() {
+  function showModal(clickedItem) {
+    console.log('first', clickedItem);
+    setModalItem(clickedItem);
     setIsOpen(true);
   }
   function closeModal() {
@@ -182,16 +185,17 @@ function Main() {
     {
       hornedList.map((item)=>(
         <HornedBeast
+          key={item._id}
           title={item.title}
           description={item.description}
           imageUrl={item.image_url}
-          showModal={showModal}
+          showModal={() => showModal(item)}
         />
       ))
     }
-    {isOpen && <Modal onClose={closeModal}/>}
+    {isOpen && <Modal item={modalItem} onClose={closeModal}/>}
      </main>
-  );
+  ); 
 }
 
 
