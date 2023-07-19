@@ -1,5 +1,7 @@
 import HornedBeast from "../HornedBeast";
 import "./main.css"
+import Modal from '../Modal'
+import { useState } from "react";
 
 const hornedList = [
   {
@@ -166,6 +168,15 @@ const hornedList = [
 
 
 function Main() {
+  const [isOpen, setIsOpen] = useState(false)
+  
+  function showModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
+  
   return (
     <main>
     {
@@ -174,9 +185,11 @@ function Main() {
           title={item.title}
           description={item.description}
           imageUrl={item.image_url}
+          showModal={showModal}
         />
       ))
     }
+    {isOpen && <Modal onClose={closeModal}/>}
      </main>
   );
 }
