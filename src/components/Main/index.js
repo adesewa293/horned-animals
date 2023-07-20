@@ -171,10 +171,9 @@ const hornedList = [
 function Main() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalItem, setModalItem] = useState(null);
-  // const [beastData, setbeastData] = useState(data)
+  const [beastData, setbeastData] = useState(hornedList)
   
   function showModal(clickedItem) {
-    // console.log('first', clickedItem);
     setModalItem(clickedItem);
     setIsOpen(true);
   }
@@ -183,14 +182,16 @@ function Main() {
     setIsOpen(false);
   }
   function handleBeasts(event){
-    console.log(event)
-    // let beastNum = event.target.value
+    let beastNum = parseInt(event.target.value);
+    const filteredBeast = hornedList.filter(beast => beast.horns === beastNum);
+    event.target.value === "" ? setbeastData(hornedList) : setbeastData(filteredBeast)
   }
+
   return (
     <main>
-      <Filter handleBeasts={handleBeasts} />
+      <Filter beastData={beastData} handleBeasts={handleBeasts} />
     {
-      hornedList.map((item)=>(
+      beastData.map((item)=>(
         <HornedBeast
           key={item._id}
           title={item.title}

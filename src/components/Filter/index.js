@@ -7,7 +7,7 @@ function Filter({handleBeasts}) {
         Select beasts by horns
       </label>
       <select name="selectedHorns" id="hornsInput" onChange={handleBeasts}>
-        <option value="all">all</option>
+        <option value="">all</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
