@@ -1,5 +1,14 @@
-h1 {
+header {
   padding: 1rem;
   background-color: hotpink;
   color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.horns-label {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+#hornsInput {
+  width: 100px;
 }

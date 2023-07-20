@@ -2,6 +2,7 @@ import HornedBeast from "../HornedBeast";
 import "./main.css"
 import Modal from '../Modal'
 import { useState } from "react";
+import Filter from "../Filter";
 
 const hornedList = [
   {
@@ -170,18 +171,24 @@ const hornedList = [
 function Main() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalItem, setModalItem] = useState(null);
+  // const [beastData, setbeastData] = useState(data)
   
   function showModal(clickedItem) {
-    console.log('first', clickedItem);
+    // console.log('first', clickedItem);
     setModalItem(clickedItem);
     setIsOpen(true);
   }
+
   function closeModal() {
     setIsOpen(false);
   }
-  
+  function handleBeasts(event){
+    console.log(event)
+    let beastNum = event.target.value
+  }
   return (
     <main>
+      <Filter handleBeasts={handleBeasts} />
     {
       hornedList.map((item)=>(
         <HornedBeast
