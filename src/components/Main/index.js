@@ -189,7 +189,8 @@ function Main() {
 
   return (
     <main>
-      <Filter beastData={beastData} handleBeasts={handleBeasts} />
+      <Filter handleBeasts={handleBeasts} />
+    <div className="main-div">
     {
       beastData.map((item)=>(
         <HornedBeast
@@ -201,6 +202,7 @@ function Main() {
         />
       ))
     }
+    </div>
     {isOpen && <Modal item={modalItem} onClose={closeModal}/>}
      </main>
   ); 
