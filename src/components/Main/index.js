@@ -184,7 +184,7 @@ function Main() {
   }
   function handleBeasts(event){
     console.log(event)
-    let beastNum = event.target.value
+    // let beastNum = event.target.value
   }
   return (
     <main>
